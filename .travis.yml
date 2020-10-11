@@ -10,7 +10,7 @@ before_install:
   - docker build -t chcjswo/docker-react-app -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true chcjswo/docker-react-app rpm run test -- --coverage
+  - docker run -e CI=true chcjswo/docker-react-app npm run test -- --coverage
 
 after_success:
   - echo "test success"
